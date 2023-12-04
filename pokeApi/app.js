@@ -1,4 +1,8 @@
 let button = document.getElementById("button");
+let image = document.getElementById("image");
+let pokeNumber = document.getElementById("number");
+let pokeName = document.getElementById("name");
+
 const changePokemon = async () => {
     let randomNumber = Math.ceil(Math.random() * 150 + 1) ;
     //On obtient entre 1 et 151
@@ -9,6 +13,8 @@ const changePokemon = async () => {
 
     let response = await data.json();
     console.log(response);
+
+    image.src = response.sprites.front_default;
 };
 
 button.addEventListener("click", changePokemon);
