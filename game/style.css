@@ -28,3 +28,11 @@ button {
 .tall {
     padding: 0 20px;
 }
+
+.container {
+    text-align: left;
+    font-size: 12px;
+    width: 300px;
+    margin: 0 auto;
+    font-style: italic;
+}
