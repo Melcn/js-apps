@@ -18,3 +18,13 @@ button {
     margin: 0 auto;
     display: block;
 }
+
+.result {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.small, 
+.tall {
+    padding: 0 20px;
+}
