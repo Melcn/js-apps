@@ -21,6 +21,11 @@ const addContainer = text => {
 const proposeNumber = () => {
     const input = document.getElementById('input-n')
     const valeur = input.value
+
+    if(valeur === ''){
+        return;
+    }
+    
     const number = parseInt(valeur, 10)
 
     addContainer('Tentative ' + nbTest)
@@ -29,7 +34,8 @@ const proposeNumber = () => {
         console.log('Bravo');
 
         addContainer('Bravo')
-        
+        const center = document.getElementById('center')
+        center.textContent = number + " bravo !"
     } else {
 
         if(numberToFind > number) {
