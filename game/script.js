@@ -17,7 +17,7 @@ const proposeNumber = () => {
     divProposition.textContent = ' Tentative ' + nbTest
 
     const container = document.getElementById('container')
-    container.appendChild(divProposition)
+    container.insertBefore(divProposition, container.firstChild)
 
     if(number==numberToFind){
         console.log('Bravo');
@@ -25,7 +25,7 @@ const proposeNumber = () => {
         const divEgal = document.createElement('div')
         divEgal.textContent = "Bravo!"
 
-            container.appendChild(divEgal)
+            container.insertBefore(divEgal, container.firstChild)
     } else {
 
         if(numberToFind > number) {
@@ -34,14 +34,14 @@ const proposeNumber = () => {
             const divHighter = document.createElement('div')
             divHigher.textContent = "Plus Grand!"
 
-            container.appendChild(divHighter)
+            container.insertBefore(divHighter, container.firstChild)
         } else {
             console.log('Le nombre est plus petit');
 
             const divSmaller = document.createElement('div')
             divSmaller.textContent = "Plus Petit!"
 
-            container.appendChild(divSmaller)
+            container.insertBefore(divSmaller, container.firstChild)
         }
 
         nbTest+=1
