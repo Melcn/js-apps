@@ -18,13 +18,16 @@ const proposeNumber = () => {
 
     const container = document.getElementById('container')
     container.appendChild(divProposition)
-    
+
     if(number==numberToFind){
         console.log('Bravo');
     } else {
 
         if(numberToFind > number) {
             console.log('Le nombre est plus grand');
+
+            const divHighter = document.createElement('div')
+            divHigher.textContent = "Plus Grand!"
         } else {
             console.log('Le nombre est plus petit');
         }
