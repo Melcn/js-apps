@@ -28,8 +28,15 @@ const proposeNumber = () => {
 
             const divHighter = document.createElement('div')
             divHigher.textContent = "Plus Grand!"
+
+            container.appendChild(divHighter)
         } else {
             console.log('Le nombre est plus petit');
+
+            const divSmaller = document.createElement('div')
+            divSmaller.textContent = "Plus Petit!"
+
+            container.appendChild(divSmaller)
         }
 
         nbTest+=1
