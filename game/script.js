@@ -7,6 +7,8 @@ const generateRandom = () => {
 
 const numberToFind = generateRandom();
 let nbTest = 1;
+let nbSmall = 1;
+let nbHigh = 100;
 
 const addContainer = text => {
     const divText = document.createElement('div')
@@ -34,14 +36,26 @@ const proposeNumber = () => {
             console.log('Le nombre est plus grand');
 
             addContainer('Plus Grand!')
+
+            if(number > nbSmall){
+                const smallest = document.getElementById('small')
+                smallest.textContent = number
+            }
         } else {
             console.log('Le nombre est plus petit');
 
             addContainer('Plus Petit')
+
+            if(number < nbHigh){
+                const highest = document.getElementById('high')
+                highest.textContent = number
+            }
         }
 
         nbTest+=1
     }
 }
+
+
 const button = document.getElementById('button-p');
 button.addEventListener('click', proposeNumber());
