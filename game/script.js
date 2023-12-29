@@ -12,7 +12,16 @@ const proposeNumber = () => {
     const valeur = input.value
     const number = parseInt(valeur, 10)
 
-    console.log(number);
+    if(number==numberToFind){
+        console.log('Bravo');
+    } else {
+
+        if(numberToFind > number) {
+            console.log('Le nombre est plus grand');
+        } else {
+            console.log('Le nombre est plus petit');
+        }
+    }
 }
 const button = document.getElementById('button-p');
 button.addEventListener('click', proposeNumber());
