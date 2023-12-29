@@ -8,17 +8,19 @@ const generateRandom = () => {
 const numberToFind = generateRandom();
 let nbTest = 1;
 
+const addContainer = text => {
+    const divText = document.createElement('div')
+    divText.textContent = text
+
+    const container = document.getElementById('container')
+    container.insertBefore(divText, container.firstChild)
+}
 const proposeNumber = () => {
     const input = document.getElementById('input-n')
     const valeur = input.value
     const number = parseInt(valeur, 10)
 
-    const divProposition = document.createElement('div')
-    divProposition.textContent = ' Tentative ' + nbTest
-
-    const container = document.getElementById('container')
-    container.insertBefore(divProposition, container.firstChild)
-
+    addContainer('Tentative ' + nbTest)
     if(number==numberToFind){
         console.log('Bravo');
 
