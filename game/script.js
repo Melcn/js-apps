@@ -15,35 +15,29 @@ const addContainer = text => {
     const container = document.getElementById('container')
     container.insertBefore(divText, container.firstChild)
 }
+
 const proposeNumber = () => {
     const input = document.getElementById('input-n')
     const valeur = input.value
     const number = parseInt(valeur, 10)
 
     addContainer('Tentative ' + nbTest)
+
     if(number==numberToFind){
         console.log('Bravo');
 
-        const divEgal = document.createElement('div')
-        divEgal.textContent = "Bravo!"
-
-            container.insertBefore(divEgal, container.firstChild)
+        addContainer('Bravo')
+        
     } else {
 
         if(numberToFind > number) {
             console.log('Le nombre est plus grand');
 
-            const divHighter = document.createElement('div')
-            divHigher.textContent = "Plus Grand!"
-
-            container.insertBefore(divHighter, container.firstChild)
+            addContainer('Plus Grand!')
         } else {
             console.log('Le nombre est plus petit');
 
-            const divSmaller = document.createElement('div')
-            divSmaller.textContent = "Plus Petit!"
-
-            container.insertBefore(divSmaller, container.firstChild)
+            addContainer('Plus Petit')
         }
 
         nbTest+=1
