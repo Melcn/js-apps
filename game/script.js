@@ -12,6 +12,8 @@ const proposeNumber = () => {
     const valeur = input.value
     const number = parseInt(valeur, 10)
 
+    const container = document.getElementById('container')
+    
     if(number==numberToFind){
         console.log('Bravo');
     } else {
