@@ -13,11 +13,12 @@ const proposeNumber = () => {
     const valeur = input.value
     const number = parseInt(valeur, 10)
 
-    const container = document.getElementById('container')
-
     const divProposition = document.createElement('div')
     divProposition.textContent = ' Tentative ' + nbTest
 
+    const container = document.getElementById('container')
+    container.appendChild(divProposition)
+    
     if(number==numberToFind){
         console.log('Bravo');
     } else {
