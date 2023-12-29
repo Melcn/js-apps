@@ -21,6 +21,11 @@ const proposeNumber = () => {
 
     if(number==numberToFind){
         console.log('Bravo');
+
+        const divEgal = document.createElement('div')
+        divEgal.textContent = "Bravo!"
+
+            container.appendChild(divEgal)
     } else {
 
         if(numberToFind > number) {
